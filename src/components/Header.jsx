@@ -27,7 +27,7 @@ function Header() {
   
   ]
  
-  const [dropdown, setDropdown] = useState({small:false, big:true})
+  const [dropdown, setDropdown] = useState(false)
   
   return (
    <nav>
