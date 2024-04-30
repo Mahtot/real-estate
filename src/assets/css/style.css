@@ -104,7 +104,7 @@ nav .links .link:hover{
     width: 100px;
     font-family: Outfit;
     transition: all 0.5s;
-    /* margin-top: 40px; */
+    margin-top: 40px;
 }
 .btn-container.login{
     color:var(--primaryColor);
@@ -213,5 +213,8 @@ nav .links.hide .link:hover{
     color: #a69420;
     border: 0;
     
+}
+.btn-container{
+    margin-top: 0;
 }
 }
