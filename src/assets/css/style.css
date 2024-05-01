@@ -159,9 +159,83 @@ nav .links.hide .link.active{
     color: #a69420;
 
 }
+
+/* styles for homepage */
+/* style for main part of the homepage */
+.main-container{
+    background-image: url('../imgs/main.jpg');
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: 100% 40%;
+
+}
+.overlay{
+  background-color: rgba(0, 0, 0, 0.7); 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:70px;
+}
+.main-container h1{
+    font-family: Inter;
+    font-size: 32px;
+    padding: 10px;
+    color: rgba(255, 255, 255, 1);
+    text-transform: capitalize;
+}
+.main-container .search-box{
+    overflow-x: auto;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    padding-left: 10px;
+    gap:10px;
+    width: 90vw;
+    border-radius: 15px;
+    height: 75px;
+}
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root, .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input,
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root    {
+    font-size: 12px !important;
+}
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root{
+    height: 40px;
+}
+.main-container #search-icon{
+    border: 0;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: all 0.5s;
+    background-color: white;
+    margin-left: auto;
+    color: var(--primaryColor);
+    opacity: 0.7;
+    /* width: 100px; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+
+}
+.main-container #search-icon:hover{
+    background-color: #e2ebf4;
+    opacity: 0.8;
+}
 /* styles for big devices */
 
-@media screen and (min-width:993px){
+@media screen and (min-width:800px){
     nav .links.show{
         display: none;
     }
@@ -217,4 +291,24 @@ nav .links.hide .link:hover{
 .btn-container{
     margin-top: 0;
 }
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root, .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input,
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root    {
+    font-size: 16px !important;
+}
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root{
+    height: auto;
+}
+.main-container h1{
+    font-size: 46px;
+     }
+.main-container .search-box{
+    width: auto;
+}
+}
+
+@media screen and (min-width:1245px){
+    .main-container h1{
+        font-size: 54px;
+         }
+  
 }

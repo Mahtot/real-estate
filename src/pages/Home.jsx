@@ -1,6 +1,11 @@
+import Main from "../components/Main"
+
 function Home() {
   return (
-    <div>Home</div>
+    <div>
+        <Main/>
+
+    </div>
   )
 }
 export default Home
