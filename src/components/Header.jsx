@@ -3,7 +3,7 @@ import { CiMenuFries } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
 import { NavLink, useLocation } from "react-router-dom";
 import Button from './Button';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../assets/css/style.css';
 function Header() {
 
@@ -29,6 +29,20 @@ function Header() {
  
   const [dropdown, setDropdown] = useState(false)
   
+  // useEffect(() => {
+  //   document.addEventListener('mousedown', handleOutsideClick);
+
+  //   return () => {
+  //     document.removeEventListener('mousedown', handleOutsideClick);
+  //   };
+  // }, [dropdown]);
+  
+  const handleOutsideClick = (event) => {
+   
+         setDropdown(false);
+    
+  };
+
   return (
    <nav>
     <div id='logo'>
@@ -46,6 +60,7 @@ function Header() {
                   className={`link  ${item.name}`} 
                   activeClassName='active'
                   exact
+                  onClick={()=>setDropdown(false)}
                   >
                <div className="link-text">{item.name}</div>
           </NavLink>

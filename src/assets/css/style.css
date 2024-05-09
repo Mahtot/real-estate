@@ -16,6 +16,12 @@
 :root{
     --primaryColor: #061B2C;
     --seecondaryColor:#E4D574;
+    --textColor:#776C0E;
+}
+
+html,
+body{
+    width: 100%;
 }
 body{
     box-sizing: border-box;
@@ -25,8 +31,6 @@ body{
 
 nav{
     display: flex;
-    width: 100vw;
-    /* border-bottom: 00.2px solid var(--primaryColor); */
     box-shadow: 2px 0px 1.4px var(--primaryColor);
     align-items: center;
     /* margin-bottom: 50px; */
@@ -198,11 +202,11 @@ nav .links.hide .link.active{
     flex-direction: row;
     justify-items: center;
     align-items: center;
-    padding-left: 10px;
-    gap:10px;
+    padding-left: 20px;
+    gap:20px;
     width: 90vw;
     border-radius: 15px;
-    height: 75px;
+    height: 85px;
 }
 
 .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root, .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input,
@@ -221,7 +225,7 @@ nav .links.hide .link.active{
     margin-left: auto;
     color: var(--primaryColor);
     opacity: 0.7;
-    /* width: 100px; */
+    width: 100px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -233,6 +237,100 @@ nav .links.hide .link.active{
     background-color: #e2ebf4;
     opacity: 0.8;
 }
+
+/* styles for the desc section of the home page */
+.home{
+    display: flex;
+    flex-direction: column;
+    gap:120px;
+    width: 100%;
+}
+.sec-main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+}
+
+.sec-main .first{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* padding: 20px; */
+    align-items: center;
+    justify-items: center;
+    /* border:1px solid red; */
+    gap:30px;
+
+}
+
+.sec-main .first div:first-child{
+    padding: 0 20px;
+}
+.sec-main .second{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 30px;
+    margin-top: 125px;
+}
+.sec-main h1{
+    font-family: Inter;
+    font-family: 600;
+    color:#384956;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+.sec-main p{
+    font-family: Outfit;
+    font-size: 16px;
+
+}
+.sec-main #p-link{
+    color: var(--textColor);
+    text-decoration: none;
+}
+.sec-main #img-cont{
+    height: 200px;
+}
+#img-cont img{
+    max-width:100%;
+    border-radius:5px;
+    height: 100%;
+}
+.sec-main .list-cont{
+    display: grid;
+    justify-self: center;
+    grid-template-columns: 80vw;
+    grid-template-rows: repeat(4, auto);
+    gap:20px;
+    font-size: 16px;
+    padding: 30px;
+}
+
+.second h2{
+    font-weight: 600;
+    font-family: Inter;
+    font-size: 24px;
+    width: 80%;
+    text-align: center;
+    color: var(--primaryColor);
+}
+.second #item{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap:20px;
+    width:80vw;
+    font-family: Outfit;
+}
+
+.second #icon{
+    color: var(--seecondaryColor);
+}
+
 /* styles for big devices */
 
 @media screen and (min-width:800px){
@@ -302,7 +400,55 @@ nav .links.hide .link:hover{
     font-size: 46px;
      }
 .main-container .search-box{
+    width: 60vw;
+    align-items: center;
+    padding-left: 100px;
+}
+
+/* styles for the desc section of the home page */
+.sec-main .first{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90vw;
+    padding-left: 30px;
+}
+.sec-main h1{
+    font-size: 32px;
+}
+.sec-main p{
+    font-size: 18px;
+}
+.second h2{
+    font-size: 28px;
+    margin: 50px 0;
+    text-align: center;
+}
+.sec-main #img-cont{
+    display: inline-block;
+}
+.sec-main .list-cont{
     width: auto;
+    grid-template-columns: 30vw 30vw;
+    grid-template-rows: repeat(2, auto);
+    justify-content: center;
+    justify-items: stretch;
+    text-align: center;
+    gap:30px;
+    column-gap: 100px;
+    font-size: 16px;
+    /* padding-left: 50px; */
+    /* border:1px solid red; */
+    margin: 0 auto;
+    
+
+}
+
+.second #item{
+    width: 40vw;
+    /* border:1px solid red; */
+    font-size: 18px;
+    padding: 5px;
+    padding-left: 0px;
 }
 }
 
