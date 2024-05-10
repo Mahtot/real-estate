@@ -195,12 +195,14 @@ nav .links.hide .link.active{
     color: rgba(255, 255, 255, 1);
     text-transform: capitalize;
 }
-.main-container .search-box{
+.search-box
+{
     overflow-x: auto;
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: row;
     justify-items: center;
+    
     align-items: center;
     padding-left: 20px;
     gap:20px;
@@ -216,7 +218,7 @@ nav .links.hide .link.active{
 .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root{
     height: 40px;
 }
-.main-container #search-icon{
+ #search-icon{
     border: 0;
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
@@ -233,7 +235,7 @@ nav .links.hide .link.active{
     padding: 0 20px;
 
 }
-.main-container #search-icon:hover{
+ #search-icon:hover{
     background-color: #e2ebf4;
     opacity: 0.8;
 }
@@ -399,10 +401,14 @@ nav .links.hide .link:hover{
 .main-container h1{
     font-size: 46px;
      }
-.main-container .search-box{
+ .search-box{
     width: 60vw;
     align-items: center;
     padding-left: 100px;
+    /* border:1px solid red; */
+    justify-content: center;
+    margin: 50px auto;
+
 }
 
 /* styles for the desc section of the home page */

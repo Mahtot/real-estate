@@ -1,6 +1,15 @@
+import '../assets/css/services.css'
+
+
 function Services() {
+  
   return (
-    <div>Services</div>
+    <div className='services-container'>
+      <div>
+         
+      </div>
+      
+    </div>
   )
 }
 export default Services

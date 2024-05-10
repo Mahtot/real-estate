@@ -2,6 +2,13 @@
     --primaryColor: #061B2C;
     --seecondaryColor:#E4D574;
     --textColor:#776C0E;
+    --headingColor: rgba(56, 73, 86, 0.9);
+    --bodyColor: #555;
+}
+
+a{
+    text-decoration: none;
+    color:unset;
 }
 
 .footer-container{
@@ -153,6 +160,302 @@
 }
 
 
+/* styles for company description */
+.about-container{
+    display: flex;
+    flex-direction: column;
+    gap:150px;
+    margin-top: 50px;
+}
+.company-cont {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin: 30px auto;
+    gap: 50px;
+  }
+  
+  .company-cont .description {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+  }
+  
+  .company-cont .description .para {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .company-cont .description .para p {
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.6;
+    font-size: 20px;
+    text-align: justify;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  
+  .company-cont .description .para p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .company-cont .description .para p::first-letter {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-right: 0.2em;
+  }
+  
+  .company-cont button {
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 0;
+    background-color: var(--primaryColor);
+    color: rgba(255, 255, 255, 0.9);
+    transition: all 0.5s;
+    width: 300px;
+    margin-top: auto;
+  }
+  
+  .company-cont button:hover {
+    opacity: 0.8;
+  }
+  
+  .company-cont h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 42px;
+    color: #776C0E;
+  }
+  
+  .company-cont .img-container {
+    width: 50%;
+  }
+  
+  .company-cont .description img {
+    max-width: 100%;
+    border-radius: 15px;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+
+  /* Styles for story container */
+  .story-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    margin: 80px auto;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .story-content {
+    padding: 60px;
+  }
+  
+  .story-container h2,
+  .teams-container h2 {
+    font-family: "Montserrat", sans-serif;
+    color: var(--headingColor);
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  .story-container p {
+    font-family: "Outfit", sans-serif;
+    line-height: 1.6;
+    font-size: 20px;
+    text-align: left;
+    color: var(--bodyColor);
+  }
+
+  .teams-container {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin: 80px auto;
+  }
+  
+  .teams-container h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 36px;
+    color: var(--headingColor);
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .team-content {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 20px;
+  }
+  
+  .team-content::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .team-content::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 6px;
+  }
+  
+  .team-content::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+  }
+  
+  .team-content::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
+  .person-container {
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
+    margin:30px auto;
+}
+  
+  .person-container #img-container {
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .person-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .person-container #img-container h2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .person-container #job {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .person-container #job h3 {
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    color: var(--bodyColor);
+    margin: 0;
+  }
+  
+  .person-container:hover img {
+    transform: scale(1.1);
+  }
+  
+
+  @media (max-width: 768px) {
+    .company-cont {
+      width: 90vw;
+    }
+  
+    .company-cont .description {
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .company-cont .description .para {
+      width: 100%;
+    }
+  
+    .company-cont .description .para p {
+      font-size: 18px;
+    }
+  
+    .company-cont .img-container {
+      width: 100%;
+    }
+  
+    .company-cont .description img {
+      max-height: 400px;
+    }
+  
+    .company-cont button {
+      width: 100%;
+    }
+
+
+    .story-container {
+        width: 90vw;
+        margin: 60px auto;
+      }
+    
+      .story-content {
+        padding: 40px;
+      }
+    
+      .story-container h2,
+      .teams-container h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        
+      }
+    
+      .story-container p {
+        font-size: 16px;
+      }
+
+      .teams-container {
+        width: 90vw;
+      }
+    
+      .teams-container h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+      }
+    
+      .team-content {
+        gap: 20px;
+      }
+    
+      .person-container {
+        flex: 0 0 250px;
+      }
+    
+      .person-container img {
+        height: 180px;
+      }
+    
+      .person-container #img-container h2 {
+        font-size: 18px;
+      }
+    
+      .person-container #job h3 {
+        font-size: 16px;
+      }
+  }
+
+
+
 @media screen and (max-width:993px){
     .footer-container .fir{
         display: grid;
@@ -191,13 +494,11 @@
         gap: 30px;
         justify-items: center;
     }
-    .second p:first-child,
-    .second p:nth-child(2){
-        /* justify-self: start; */
-        /* padding-left: 80px; */
-    }
+  
 
 }
+
+
 @media screen and (max-width:550px){
     .footer-container #footer-logo{
         width: 150px;
