@@ -1,24 +1,20 @@
 import main from '../assets/imgs/main.jpg'
 import { FaSearch } from "react-icons/fa";
 import CustomSelect from './CustomSelect';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { FilterContext } from "../App";
+import { Navigate, useNavigate } from 'react-router-dom';
 
 function Main() {
-    const [selectedValues, setSelectedValues] = useState({
-        subCity : '',
-        price: '',
-        property: ''
-      });
 
-    const handleChange = (name) => (value) => {
-        setSelectedValues((prevValues) => ({
-            ...prevValues,
-            [name]: value
-        }));
-    };
+    const navigate=useNavigate();
+    const { selectedValues, setSelectedValues, handleChange } = useContext(FilterContext);
+
     
-    const handleSubmit=()=>{
-        alert('success')
+    
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        navigate('/property')
     }
   return (
     <div className='main-container'>

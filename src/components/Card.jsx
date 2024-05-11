@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Modalfunc from './Modal';
 
 
-function Card({type, location, src}) {
+function Card({type, location, src, property}) {
     const [isOpen, setIsOpen] = useState(false)
 
     const handleOpenModal = () => {
@@ -22,7 +22,12 @@ function Card({type, location, src}) {
         {src && <img src={src} alt="a picture of a house" onClick={handleOpenModal}/>}
  
         </div>
-        <div id='card-desc'>{location}</div>
+       
+        <div id='card-desc'>
+           <p dangerouslySetInnerHTML={{ __html: location }}></p><br/>
+           <p>Property-type: {property}</p>
+
+          </div>
         <div id='card-btm'>
             <div>
                 <p onClick={handleOpenModal}>Details</p>

@@ -11,9 +11,11 @@ function Company({ head, desc, src, btn }) {
             <p>{desc}</p>
             <button><Link to='/contact'>{btn}</Link></button>
           </div>
-          <div className="img-container">
+        { src&&
+        
+        <div className="img-container">
             <img src={src} alt="house" />
-          </div>
+          </div>}
         </div>
       </div>
     );

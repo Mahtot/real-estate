@@ -1,26 +1,16 @@
 import { FaSearch } from "react-icons/fa";
 import CustomSelect from './CustomSelect';
-import { useState } from 'react';
-
+import { useState, useContext } from 'react';
+import { FilterContext } from "../App";
 
 
 function Search() {
+    const { selectedValues, setSelectedValues, handleChange } = useContext(FilterContext);
+   
     
-    const [selectedValues, setSelectedValues] = useState({
-        subCity : '',
-        price: '',
-        property: ''
-      });
-
-    const handleChange = (name) => (value) => {
-        setSelectedValues((prevValues) => ({
-            ...prevValues,
-            [name]: value
-        }));
-    };
-    
-    const handleSubmit=()=>{
-        alert('success')
+    const handleSubmit=(e)=>{
+        e.preventDefault()
+        // alert(selectedValues.price)
     }
 
     return (
@@ -30,6 +20,7 @@ function Search() {
                     <CustomSelect
                         label="Sub-city"
                         options={[
+                            { value: 'all', label: 'all' },
                             { value: 'adihaki', label: 'Adi-haki' },
                             { value: 'kedamayWeyane', label: 'Kedamay weyane' },
                             { value: 'hadnet', label: 'Hadnet' },
@@ -42,6 +33,7 @@ function Search() {
                     <CustomSelect
                         label="Price"
                         options={[
+                            { value: 'all', label: 'all' },
                             { value: '1000-2000', label: '1000-2000' },
                             { value: '5000-20000', label: '5000-20,000' },
                             { value: 'above', label: 'above 30,000' },
@@ -53,10 +45,11 @@ function Search() {
                     <CustomSelect
                         label="Property-Type"
                         options={[
+                            { value: 'all', label: 'all' },
                             { value: 'Apartment', label: 'Apartment' },
                             { value: 'Villa', label: 'Villa' },
-                            { value: 'OfficeSpace', label: 'Office Space' },
-                            { value: 'VacationRental', label: 'Vacation Rental' }
+                            { value: 'Office Space', label: 'Office Space' },
+                            { value: 'Vacation Rental', label: 'Vacation Rental' }
 
                         ]}
                         value={selectedValues.property}
