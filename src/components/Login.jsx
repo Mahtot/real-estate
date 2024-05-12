@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState,useEffect } from 'react';
 import { ModalContext } from '../App';
 import { doSignInWithEmailAndPassword, 
   doSignInWithGoogle,
@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Login({ onClose }) {
   const {userLoggedIn } = useAuth();
-  const { isLogin, setIsLogin } = useContext(ModalContext);
+  const { isLogin, setIsLogin,setShowModal  } = useContext(ModalContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isSigningIn, setIsSigningIn] = useState(false);
@@ -28,7 +28,7 @@ function Login({ onClose }) {
         if (isLogin) {
           // Handle login
           await doSignInWithEmailAndPassword(email, password);
-          navigate('/dashboard');
+          navigate('/');
         } else {
           // Handle signup
           await doCreateUserWithEmailAndPassword(email, password);
@@ -50,7 +50,7 @@ function Login({ onClose }) {
       setIsSigningIn(true);
       doSignInWithGoogle()
         .then(() => {
-          navigate('/dashboard');
+          navigate('/');
         })
         .catch((err) => {
           setErrorMessage(err.message);
@@ -64,11 +64,17 @@ function Login({ onClose }) {
     // return <div>Loading...</div>;
   // }
 
+useEffect(()=>{
+  userLoggedIn &&setShowModal(false)
+})
+    
+   
 
 
   return (
     <div className="modal-container">
-      {userLoggedIn && navigate('/')}
+      {userLoggedIn&& navigate('/')}
+      
       <div className="modal-overlay" onClick={onClose}></div>
    
       <div className="modal-content">
