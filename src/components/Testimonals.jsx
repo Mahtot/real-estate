@@ -6,19 +6,19 @@ import person3 from '../assets/imgs/person1.jpg';
 function Testimonals() {
     const data =[
         {
-            name:'Olivia',
+            name:'Meron',
             comment:'I was so busy to find house for a rent since i was pregnant and busy with work but this platform saved my life. ',
-            src: person1
+            src: person3
         },
         {
-            name:'David',
+            name:'Dawit',
             comment:'Easy to use and such a time saver platform ',
             src: person2
         },
         {
-            name:'Olivia',
+            name:'Getachew',
             comment:'Can’t imagine how it would have been without using this service',
-            src: person3
+            src: person1
         }
     ]
   return (

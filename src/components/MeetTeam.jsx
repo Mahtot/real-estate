@@ -6,17 +6,17 @@ import person3 from '../assets/imgs/person1.jpg';
 
 function MeetTeam() {
         const data =[{
-            name:"Olivia",
+            name:"Meseret",
             src:person3,
             job:'Founder of HomeHive'
         },
         {
-            name:"David",
+            name:"Dawit",
             src:person2,
             job:'Manager'
         },
         {
-            name:"Olivia",
+            name:"Daniel",
             src:person1,
             job:'Customer Relation'
         }]
