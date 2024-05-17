@@ -15,18 +15,28 @@ export default function Desc() {
   const cardDatas = [
     {
       type: 'For Rent',
-      location: 'Located at adihawsi \nprice 30,000 birr',
-      src: pic1
+      location: 'Sub-city: adihaki <br/> <br/>  price: 1000 birr',
+      price:'1000-2000',
+      src: pic1,
+      locationHome:'adihaki',
+      property:'Apartment'
     },
     {
       type: 'For sale',
-      location: 'Located at adihawsi\nprice 30,000 birr',
-      src: pic2
+      location: 'Sub-city: kedamayWeyane <br/> <br/> price: 2000 birr',
+      src: pic2,
+      price:'1000-2000',
+      locationHome:'kedamayWeyane',
+      property:'Apartment'
+
     },
     {
       type: 'For Rent',
-      location: 'Located at adihawsi\n price 30,000 birr',
-      src: pic3
+      location: 'Sub-city: hadnet <br/> <br/> price: 5000 birr',
+      src: pic3,
+      price:'5000-20000',
+      locationHome:'hadnet',
+      property:'Villa'
     }
   ];
   const { setIsLogin, showModal, setShowModal ,toggleModal } = useContext(ModalContext);
@@ -59,8 +69,14 @@ export default function Desc() {
         <h2>Featured Homes: Your Next Move Starts Here</h2>
         <div className="featured-homes">
           {cardDatas.map((item, index) => (
-            <Card type={item.type} key={index} location={item.location} src={item.src} />
-          ))}
+                <Card
+                type={item.type}
+                key={index}
+                location={item.location}
+                src={item.src}
+                property={item.property}
+
+                />          ))}
         </div>
       </div>
     </div>
