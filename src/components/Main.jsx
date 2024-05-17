@@ -25,6 +25,7 @@ function Main() {
                     <CustomSelect
                         label="Sub-city"
                         options={[
+                            { value: 'all', label: 'all' },
                             { value: 'adihaki', label: 'Adi-haki' },
                             { value: 'kedamayWeyane', label: 'Kedamay weyane' },
                             { value: 'hadnet', label: 'Hadnet' },
@@ -37,6 +38,7 @@ function Main() {
                     <CustomSelect
                         label="Price"
                         options={[
+                            { value: 'all', label: 'all' },
                             { value: '1000-2000', label: '1000-2000' },
                             { value: '5000-20000', label: '5000-20,000' },
                             { value: 'above', label: 'above 30,000' },
@@ -48,6 +50,7 @@ function Main() {
                     <CustomSelect
                         label="Property-Type"
                         options={[
+                            { value: 'all', label: 'all' },
                             { value: 'Apartment', label: 'Apartment' },
                             { value: 'Villa', label: 'Villa' },
                             { value: 'OfficeSpace', label: 'Office Space' },

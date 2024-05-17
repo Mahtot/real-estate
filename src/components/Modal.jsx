@@ -94,7 +94,7 @@ export default function Modalfunc({ isOpen, onClose, imageSrc, type, location })
                      Available {type}
                 </div>
                 <Typography  >
-                    <Link to='/' className='modal-contact'>Contact agent</Link>
+                    <Link to='/contact' className='modal-contact'>Contact agent</Link>
                 </Typography>
 
             </Typography>

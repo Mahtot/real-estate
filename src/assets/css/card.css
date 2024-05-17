@@ -244,6 +244,26 @@ body, html{
     opacity: 0.9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   }
+
+
+  /* no avaulable house message */
+  .no-available-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: 200px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #666;
+    /* border:1px solid red; */
+    margin: 0 auto;
+  }
+  
+  .no-available-message p {
+    text-align: center;
+  }
+  
   @media screen and (max-width:768px) {
     .sec-main .third{
         padding: 0;

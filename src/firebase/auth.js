@@ -35,3 +35,11 @@ export const doSendEmailVerification = () => {
         url:`${window.location.origin}/home`,
     });
 };
+
+export const doSubscribeToNewsletter = async (email) => {
+  // Add your logic to subscribe the user to the newsletter here
+  // You can use a third-party service or your own backend to handle the subscription
+  console.log(`Subscribing ${email} to the newsletter`);
+  // Throw an error if needed, to handle it in the component
+  // throw new Error('Failed to subscribe to the newsletter');
+};
