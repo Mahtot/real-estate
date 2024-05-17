@@ -19,7 +19,6 @@
     --textColor:#776C0E;
 }
 
-/* Define a CSS class to apply fixed position to the body */
 .body-fixed {
     position: fixed;
     width: 100%;
