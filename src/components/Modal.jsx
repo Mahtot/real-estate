@@ -36,7 +36,9 @@ const center = {
 
 export default function Modalfunc({ isOpen, onClose, imageSrc, type, location }) {
     const { isLoaded, loadError } = useLoadScript({
-        googleMapsApiKey: 'AIzaSyBQY3mzbE_A_NZ-215G_vgZ3bJKCGD5Dlg',
+        googleMapsApiKey:  import.meta.env.VITE_GOOGLE_MAP_API_KEY,
+       
+
         libraries,
       });
     

@@ -10,7 +10,7 @@ function Search() {
     
     const handleSubmit=(e)=>{
         e.preventDefault()
-        // alert(selectedValues.price)
+        
     }
 
     return (
